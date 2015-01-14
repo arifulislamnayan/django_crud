@@ -1,0 +1,58 @@
+{% extends "base_page.html" %}
+
+{% block title %}
+Movie Library 
+
+{% endblock %}
+
+
+{% block content %}
+<h1>Welcome to Movie Collection </h1>
+<p>Lets have some good time with us.....</p>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Price($)</th>
+        <th>Release Date</th>
+        <th></th>
+    </tr>
+    {% for movie in object_list %}
+        <tr>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.genre }}</td>
+            <td>{{ movie.price }}</td>
+            <td>{{ movie.release_date }}</td>
+            <td>
+            	<a href="{% url 'movielib:create' %}" class="btn btn-default">ADD</a>
+				<a href="{% url 'movielib:edit' movie.id %}" class="btn btn-default">Edit</a>
+                <a href="{% url 'movielib:movie_delete' movie.id %}" class="btn btn-danger">Delete</a>
+				</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
