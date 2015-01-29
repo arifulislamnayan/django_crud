@@ -1,5 +1,7 @@
 # django_crud
 This is a simple django **crud application**
-**Used Language:**
-
-Built with _django 1.7 python 2.7_
+Technology
+⋅⋅* Framework: Django 1.7
+Language
+..* Programming Language: Python 2.7.6
+	
